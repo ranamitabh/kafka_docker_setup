@@ -15,7 +15,7 @@ public class Producer {
 
         KafkaProducer<String, String> kafkaProducer = new KafkaProducer<String, String>(properties);
         try{
-            for(int i = 0; i < 150; i++){
+            for(int i = 0; i < 70; i++){
                 System.out.println(i);
                 kafkaProducer.send(new ProducerRecord<String, String>("test1", Integer.toString(i), "test message - " + i ));
             }
